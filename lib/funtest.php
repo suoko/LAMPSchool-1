@@ -25,15 +25,16 @@ function stampa_head($titolo, $tipo, $script, $abil = "DSPMATL", $contr = true, 
            <html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
 	    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
             <title>$titolo</title>
+            <link rel='stylesheet' href='../css/stile-boot.css'>
             <link rel='stylesheet' type='text/css' href='../css/stile" . get_suffisso() . ".css' />
             <link rel='icon' href='../immagini/favicon.ico?v=2' />
-            <link rel='stylesheet' type='text/css' href='../lib/js/jquery-ui-1.10.3.smoothness.css' />
+            <!--<link rel='stylesheet' type='text/css' href='../lib/js/jquery-ui-1.10.3.smoothness.css' />
             <link rel='stylesheet' type='text/css' href='../css/bootstrap.min.css' />
-            <link rel='stylesheet' type='text/css' href='../lib/js/datetimepicker/jquery.datetimepicker.css'/>
-
-            <script src='../lib/js/jquery-1.10.2.min.js'></script>
+            <link rel='stylesheet' type='text/css' href='../lib/js/datetimepicker/jquery.datetimepicker.css'/>-->
+            <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+            <!--<script src='../lib/js/jquery-1.10.2.min.js'></script>
             <script src='../lib/js/jquery-ui-1.10.3.custom.min.js'></script>
-            <script src='../lib/js/datetimepicker/jquery.datetimepicker.js'></script>";
+            <script src='../lib/js/datetimepicker/jquery.datetimepicker.js'></script>-->";
     //<script src='ui.datepicker-it.js'></script>";
     print $script;
     print "

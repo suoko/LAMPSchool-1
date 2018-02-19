@@ -430,11 +430,19 @@ if ($cambiamentopassword)
 }
 else
 {
-    print "<div class='container'>
-					<div class='row justify-content-md-center'>
-						<div class='col-md-auto'><div class='prima'>MENU</div>
-				  <div class='row justify-content-md-center'>";
-    print "<div class='col-md-auto'>";
+    print "<!-- jQuery CDN -->
+         <script src='../lib/js/jquery-1.12.0.min.js'></script>
+         <!-- Bootstrap Js CDN -->
+         <script src='../lib/js/bootstrap.min.js'></script>
+
+         <script type='text/javascript'>
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>";
+    print "<!--<div class='col-md-auto'>-->";
     menu_open();
 
 
@@ -1786,28 +1794,48 @@ stampa_piede("");
 
 function menu_open($enable = TRUE)
 {
-    $enable and print "\n<form id='formMenu' method='POST'>\n<div id='accordion'>";
+    $enable and print "\n<div class='wrapper'>
+                      <nav id='sidebar'>
+                <div class='sidebar-header'>
+                    <h3>" . $annoscolastico . "</h3>
+                </div>
+
+                <ul class='list-unstyled components'>
+                    <p>Dummy Heading</p>";
 }
 
 // Chiude il menu'
 
 function menu_close($enable = TRUE)
 {
-    $enable and print "</div>\n</form>\n";
+    $enable and print "\n</ul>
+            </nav>                    <div id='content'>
+
+                <nav class='navbar navbar-default'>
+                    <div class='container-fluid'>
+
+                        <div class='navbar-header'>
+                            <button type='button' id='sidebarCollapse' class='btn btn-info navbar-btn'>
+                                <i class='glyphicon glyphicon-align-left'>Menu</i>
+                                
+                            </button>
+                        </div>
+                    </nav></div>\n";
 }
 
 // Disegna il titolo contenitore del menu'
 
 function menu_title_begin($label, $enable = TRUE)
 {
-    $enable and print "\n<h3>$label</h3><div>";
+    $enable and print "\n<li class=''>
+                        <a href='#" . str_replace(' ', '', $label) . "' data-toggle='collapse' aria-expanded='false'>$label</a><ul class='collapse list-unstyled' id='" . str_replace(' ', '', $label) . "'>";
 }
 
 // Chiude il titolo contenitore
 
 function menu_title_end($enable = TRUE)
 {
-    $enable and print "\n</div>";
+    $enable and print "\n</ul></li>";
 }
 
 // Disegna una voce del menu'
@@ -1818,7 +1846,7 @@ function menu_item($url, $label, $enable = TRUE)
 // permette di cambiare l'attributo action della form
 // la function setAction è definita nella sezione HEAD
 // in questo modo tutto il menu è compreso nella form con il metodo POST
-    $enable and print "\n<button onclick=\"setAction('$url');\" class='button'>$label</button>";
+    $enable and print "\n<li><a href= '$url'>$label</a></li>";
 }
 
 // Disegna una riga vuota nel menu'
