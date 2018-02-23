@@ -1811,16 +1811,18 @@ function menu_close($enable = TRUE)
     $enable and print "\n</ul>
             </nav>                    <div id='content'>
 
-                <nav class='navbar navbar-default'>
-                    <div class='container-fluid'>
+                <nav class='navbar navbar-default col-md-6'>
+                    <div class='container-fluid col-md-6'>
 
-                        <div class='navbar-header'>
+                        <div class='navbar-header col-md-6'>
                             <button type='button' id='sidebarCollapse' class='btn btn-info navbar-btn'>
                                 <i class='glyphicon glyphicon-align-left'>Menu</i>
                                 
                             </button>
                         </div>
-                    </nav></div>\n";
+                    </nav>
+         <div ><iframe  name='showpage'></iframe></div>
+                     </div>\n";
 }
 
 // Disegna il titolo contenitore del menu'
@@ -1846,7 +1848,7 @@ function menu_item($url, $label, $enable = TRUE)
 // permette di cambiare l'attributo action della form
 // la function setAction è definita nella sezione HEAD
 // in questo modo tutto il menu è compreso nella form con il metodo POST
-    $enable and print "\n<li><a href= '$url'>$label</a></li>";
+    $enable and print "\n<li><a href='$url' target='showpage'>$label</a></li>";
 }
 
 // Disegna una riga vuota nel menu'

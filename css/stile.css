@@ -256,3 +256,9 @@ input[type="submit"]:disabled {
     width:220px;
   }
 }
+
+iframe, object, embed {
+    max-width: 100%;
+    width: 500;
+    height: 500;
+}
