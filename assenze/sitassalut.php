@@ -41,7 +41,7 @@ if ($tipoutente == "")
 $titolo = "Situazione assenze alunni";
 $script = ""; 
 stampa_head($titolo, "", $script,"MSPDLT");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 $codalunno = $_SESSION['idstudente'];
 
@@ -229,7 +229,7 @@ while ($val = mysqli_fetch_array($ris))
 }
 print "</table>";
 
-stampa_piede();
+//stampa_piede();
 
 
 

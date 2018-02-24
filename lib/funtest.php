@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /**
  * Stampa l'intestazione html con css e javascript comuni all'applicativo

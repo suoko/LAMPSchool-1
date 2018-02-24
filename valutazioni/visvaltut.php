@@ -37,7 +37,7 @@ if ($tipoutente == "")
 
 $titolo = "Visualizzazione voti alunno";
 $script = "";
-//stampa_head($titolo, "", $script,"TL");
+stampa_head($titolo, "", $script,"TL");
 //stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 

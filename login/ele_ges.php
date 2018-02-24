@@ -1801,7 +1801,7 @@ function menu_open($enable = TRUE)
                 </div>
 
                 <ul class='list-unstyled components'>
-                    <p>Dummy Heading</p>";
+                    <p>MENU</p>";
 }
 
 // Chiude il menu'
@@ -1811,10 +1811,10 @@ function menu_close($enable = TRUE)
     $enable and print "\n</ul>
             </nav>                    <div id='content'>
 
-                <nav class='navbar navbar-default col-md-6'>
-                    <div class='container-fluid col-md-6'>
+                <nav class='navbar navbar-default btn'>
+                    <div class='container-fluid'>
 
-                        <div class='navbar-header col-md-6'>
+                        <div class='navbar-header'>
                             <button type='button' id='sidebarCollapse' class='btn btn-info navbar-btn'>
                                 <i class='glyphicon glyphicon-align-left'>Menu</i>
                                 
@@ -1848,7 +1848,7 @@ function menu_item($url, $label, $enable = TRUE)
 // permette di cambiare l'attributo action della form
 // la function setAction è definita nella sezione HEAD
 // in questo modo tutto il menu è compreso nella form con il metodo POST
-    $enable and print "\n<li><a href='$url' target='showpage'>$label</a></li>";
+    $enable and print "\n<li><a onclick=$('#sidebar').toggleClass('active') href='$url' target='showpage'>$label</a></li>";
 }
 
 // Disegna una riga vuota nel menu'
