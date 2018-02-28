@@ -1,3 +1,24 @@
+Lampschool dockerized
+=====================
+
+"Run docker_create" 
+"Docker will create the image and run it by creating a container"
+"Any local apache and mysql server will be stopped to avoid conflicts"
+
+"Below the mysql credentials and db name."
+"Use them by browsing the URL: http://localhost/app/install"
+
+"ADMIN name    = admin"
+"USER name     = lampschool"
+"USER PASSword = lampschool"
+"DB name       = lampschool"
+"ROOT PASSword = password"
+
+
+
+
+
+
 tutum-docker-lamp
 =================
 
