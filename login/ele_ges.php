@@ -1801,7 +1801,7 @@ function menu_open($enable = TRUE)
                 </div>
 
                 <ul class='list-unstyled components'>
-                    <p>MENU</p>";
+                    <!--<p>MENU</p>-->";
 }
 
 // Chiude il menu'

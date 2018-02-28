@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Now all docker images and containers will be removed. Try with sudo if you got errors"
+echo "Press a key to continue"
+echo ""
+echo ""
+# Delete all containers
+sudo docker rm $(sudo docker ps -a -q)
+# Delete all images
+sudo docker rmi $(sudo docker images -q)

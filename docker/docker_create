@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Now docker will create the image and run it by creating a container"
+echo "Any local apache and mysql server will be stopped to avoid conflicts"
+echo "If you have other web server running please stop it manually"
+read -n 1 -s -r -p "Press any key to continue"
+echo ""
+echo ""
+sudo systemctl stop apache2.service
+sudo systemctl stop mysql.service
+sudo docker build -t test/school .
+sudo docker run -d -p 80:80 -p 3306:3306 test/school
+echo ""
+echo ""
+echo "Below the mysql credentials and db name."
+echo "Use them by browsing the URL: http://localhost/app/install"
+echo ""
+echo "ADMIN name    = admin"
+echo "USER name     = lampschool"
+echo "USER PASSword = lampschool"
+echo "DB name       = lampschool"
+echo "ROOT PASSword = password"
