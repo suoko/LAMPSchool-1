@@ -436,6 +436,8 @@ else
          <script src='../lib/js/bootstrap.min.js'></script>
 
          <script type='text/javascript'>
+             var isTouchDevice = function() {  return 'ontouchstart' in window || 'onmsgesturechange' in window; };
+             var isDesktop = window.screenX != 0 && !isTouchDevice() ? true : false;
              $(document).ready(function () {
                  $('#sidebarCollapse').on('click', function () {
                      $('#sidebar').toggleClass('active');
@@ -1848,7 +1850,7 @@ function menu_item($url, $label, $enable = TRUE)
 // permette di cambiare l'attributo action della form
 // la function setAction è definita nella sezione HEAD
 // in questo modo tutto il menu è compreso nella form con il metodo POST
-    $enable and print "\n<li><a onclick=$('#sidebar').toggleClass('active') href='$url' target='showpage'>$label</a></li>";
+    $enable and print "\n<li><a onclick='(!isDesktop)?$(\"#sidebar\").toggleClass(\"active\"):null' href='$url' target='showpage'>$label</a></li>";
 }
 
 // Disegna una riga vuota nel menu'
