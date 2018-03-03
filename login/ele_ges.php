@@ -1798,9 +1798,9 @@ function menu_open($enable = TRUE)
 {
     $enable and print "\n<div class='wrapper'>
                       <nav id='sidebar'>
-                <div class='sidebar-header'>
+                <!--<div class='sidebar-header'>
                     <h3>" . $annoscolastico . "</h3>
-                </div>
+                </div>-->
 
                 <ul class='list-unstyled components'>
                     <!--<p>MENU</p>-->";

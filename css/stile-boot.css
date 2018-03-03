@@ -62,7 +62,14 @@ a, a:hover, a:focus {
 }
 
 #sidebar.active {
+    overflow: hidden;
+   -moz-animation-delay: 3.5s;
+   -webkit-animation-delay: 3.5s;
+   -o-animation-delay: 3.5s;
+    animation-delay: 3.5s;
     margin-left: -250px;
+    /*display: none;*/
+    opacity: 0;
 }
 
 #sidebar .sidebar-header {
@@ -171,4 +178,23 @@ iframe, object, embed {
     max-width: 100%;
     width: 900px;
     height: 600px;
+}
+
+body{
+    display: inline-block;
+    max-width: 1200px;
+}
+
+
+html{
+    text-align: center;
+}
+
+.navbar, .navbar-default, .btn{
+    display: table !important;
+}
+
+a {
+    color: black !important;
+    text-decoration: none;
 }
