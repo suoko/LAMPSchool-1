@@ -1813,16 +1813,16 @@ function menu_close($enable = TRUE)
     $enable and print "\n</ul>
             </nav>                    <div id='content'>
 
-                <nav class='navbar navbar-default btn'>
+                <!--<nav class='navbar navbar-default btn'>
                     <div class='container-fluid'>
 
-                        <div class='navbar-header'>
-                            <button type='button' id='sidebarCollapse' class='btn btn-info navbar-btn'>
-                                <i class='glyphicon glyphicon-align-left'>Menu</i>
-                                
-                            </button>
-                        </div>
-                    </nav>
+                        <div class='navbar-header'>-->
+                        <script><!--
+                            
+(!isDesktop)?document.write('<button type=\"button\" id=\"sidebarCollapse\" class=\"btn btn-info navbar-btn\"><i class=\"glyphicon glyphicon-align-left\">Menu</i></button>'):null</script>
+
+                        <!--</div>
+                    </nav>-->
          <div ><iframe  name='showpage'></iframe></div>
                      </div>\n";
 }

@@ -68,8 +68,8 @@ a, a:hover, a:focus {
    -o-animation-delay: 3.5s;
     animation-delay: 3.5s;
     margin-left: -250px;
-    /*display: none;*/
-    opacity: 0;
+    /*display: none;
+    opacity: 0;*/
 }
 
 #sidebar .sidebar-header {
