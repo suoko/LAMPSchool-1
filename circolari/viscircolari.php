@@ -69,7 +69,7 @@ $script .= "<script>
 	             });
 </script>";
 stampa_head($titolo, "", $script,"MSAPDT");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 
 $visualizzabili = array("image/jpeg", "application/pdf", "image/pjpeg", "image/gif", "image/png");
@@ -79,7 +79,7 @@ print ("
 		
 		
 		<p align='center'>
-		<table align='center' border='1'>
+		<table width='75%' align='center' border='1'>
 		<tr class='prima'>
 			<td><b>Circolare</b></td>
 			<td><b>Data inizio</b></td>
@@ -134,7 +134,7 @@ print "</table>";
 
 
 mysqli_close($con);
-stampa_piede("");
+//stampa_piede("");
 
 function decod_dest($tipodest)
 {

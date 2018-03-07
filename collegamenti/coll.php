@@ -32,7 +32,7 @@ if ($tipoutente == "")
 $titolo = "Elenco collegamenti web";
 $script = "";
 stampa_head($titolo, "", $script,"PMSDAT");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 
 $con = mysqli_connect($db_server, $db_user, $db_password, $db_nome);
@@ -71,6 +71,6 @@ else
 }
 
 
-stampa_piede("");
+//stampa_piede("");
 mysqli_close($con);
 

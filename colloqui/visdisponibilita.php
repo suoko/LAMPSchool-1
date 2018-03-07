@@ -46,7 +46,7 @@ $script = "<script type='text/javascript'>
          //-->
          </script>";
 stampa_head($titolo, "", $script, "TDASPM");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 
 $idclasse = stringa_html("idclasse");
@@ -60,7 +60,7 @@ if ($_SESSION['tipoutente'] != 'T')
 				<form method='post' action='visdisponibilita.php' name='programmi'>
 				<input type='hidden' name='suffisso' value='$suffisso'>
 				<p align='center'>
-				<table align='center'>");
+				<table align='center' width=75%>");
 
     print("
 			  <tr>
@@ -105,9 +105,9 @@ else
 
 $ris = mysqli_query($con, inspref($query)) or die("Errore: " . inspref($query));
 if ($_SESSION['tipoutente'] == 'T')
-    print "<table border=1 align=center><tr class='prima'><td>Docente</td><td>Ricevimento</td><td>Appuntamento</td></tr>";
+    print "<table border=1 align=center width=75%><tr class='prima'><td>Docente</td><td>Ricevimento</td><td>Appuntamento</td></tr>";
 else
-    print "<table border=1 align=center><tr class='prima'><td>Docente</td><td>Ricevimento</td></tr>";
+    print "<table border=1 align=center width=75%><tr class='prima'><td>Docente</td><td>Ricevimento</td></tr>";
 while ($nom = mysqli_fetch_array($ris))
 {
 
@@ -161,6 +161,6 @@ print"<br/><center><a href=javascript:Popup('visdisponibilitastampa.php?idclasse
 
 
 mysqli_close($con);
-stampa_piede("");
+//stampa_piede("");
 
 

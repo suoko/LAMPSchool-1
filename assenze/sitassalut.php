@@ -70,7 +70,7 @@ $rs7 = mysqli_query($con,inspref("select * from tbl_usciteanticipate where idalu
 // $ultimoaggiornamento = $val0["ultimoaggiornamento"];
 
 // print "<center><i>Dati aggiornati al ".data_italiana($ultimoaggiornamento).".</i></center>
-print "<table border='1' align='center' width='50%'>";
+print "<table border='1' align='center' width='75%'>";
 
 // prelevamento dati alunno
 
@@ -177,7 +177,7 @@ if ($val = mysqli_fetch_array($ris))
 
 $query = "SELECT * FROM tbl_alunni WHERE idalunno=$codalunno";
 $ris = mysqli_query($con, inspref($query)) or die ("Errore nella query: " . mysqli_error($con));
-print ("<br><br><center><b>RIEPILOGO</b></center><br><table border=1 align=center><tr class='prima'><td><font size=1><center>Ass</td><td><font size=1><center>Rit (Rit. Brevi)</td><td><font size=1><center>Usc</td><td align=center><font size=1>Perc. ass.<br/>su monte ore<br/>($numoretot)</td><td align=center><font size=1>Perc. ass.<br/>su monte ore<br/>con deroghe</td></tr>");
+print ("<br><br><center><b>RIEPILOGO</b></center><br><table width=75% border=1 align=center><tr class='prima'><td><font size=1><center>Ass</td><td><font size=1><center>Rit (Rit. Brevi)</td><td><font size=1><center>Usc</td><td align=center><font size=1>Perc. ass.<br/>su monte ore<br/>($numoretot)</td><td align=center><font size=1>Perc. ass.<br/>su monte ore<br/>con deroghe</td></tr>");
 
 
 while ($val = mysqli_fetch_array($ris))

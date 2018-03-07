@@ -36,7 +36,7 @@ in questo programma; se non l'avete ricevuta, vedete http://www.gnu.org/licenses
 	$titolo="Modifica dati di contatto tutor";
     $script=""; 
     stampa_head($titolo,"",$script,"T");
-    stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo","","$nome_scuola","$comune_scuola");
+    //stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo","","$nome_scuola","$comune_scuola");
    
 
 	//Connessione al server SQL
@@ -58,7 +58,7 @@ in questo programma; se non l'avete ricevuta, vedete http://www.gnu.org/licenses
       print "<form action='agg_contatto.php' method='POST'>"; 
 	  
 	   
-	   print "<CENTER><table border='0'>";
+	   print "<CENTER><table width='75%' border='0'>";
 	 
 	   print "<tr><td>Email:</td><td><input type='text' name='email' value='$email'></td></tr>"; 
 	   print "<tr><td>Cellulare:</td><td><input type='text' name='telcel' value='$telcel'></td></tr>"; 
@@ -67,7 +67,7 @@ in questo programma; se non l'avete ricevuta, vedete http://www.gnu.org/licenses
 	    print "<CENTER><br> <input type='submit' value='REGISTRA'>";
        print "</CENTER></form>";  
 	 
-	stampa_piede("");
+	//stampa_piede("");
 	mysqli_close($con);
 	
 

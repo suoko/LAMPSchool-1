@@ -136,7 +136,7 @@ $script = "<script src='../lib/js/crypto.js'></script>
                  
                 </script>";
 stampa_head($titolo, "", $script,"TDSAPML");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 
 //Connessione al server SQL
@@ -151,7 +151,7 @@ if (!$con)
 print("<center>");
 // print "<form name='form1' action='ch_pwd.php' method='POST'>";
 
-print "<table border='0'>";
+print "<table border='0' width=75%>";
 print "<tr> <td> Utente </td> <td> <input type='text' name='ut' id='ut' value='$userid' disabled> <input type='hidden' name='utente' value='$userid'></td> </tr>";
 print "<tr> <td> Vecchia password </td> <td> <input type='password' name='passwor' id='passwor'> </td> </tr>";
 print "<tr> <td> Nuova password </td> <td> <input type='password' name='npas' id='npas'>
@@ -174,6 +174,6 @@ print "<br/>";
 //tasto indietro
 
 mysqli_close($con);
-stampa_piede("");
+//stampa_piede("");
 
 ?>

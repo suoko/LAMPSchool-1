@@ -36,7 +36,7 @@ if ($tipoutente == "")
 $titolo = "Visualizzazione pagella finale";
 $script = "";
 stampa_head($titolo,"",$script,"SDMAPT");
-stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
+//stampa_testata("<a href='../login/ele_ges.php'>PAGINA PRINCIPALE</a> - $titolo", "", "$nome_scuola", "$comune_scuola");
 
 $codalunno = $_SESSION['idstudente'];
 
@@ -227,6 +227,6 @@ else
 }
 
 mysqli_close($con);
-stampa_piede("");
+//stampa_piede("");
 
 

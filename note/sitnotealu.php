@@ -59,7 +59,7 @@ $codclasse=$rec['idclasse'];
 $query="select * from tbl_alunni,tbl_classi where tbl_alunni.idclasse=tbl_classi.idclasse and idalunno='$codalunno'";
 $ris=mysqli_query($con,inspref($query)) or die ("Errore nella query: ". mysqli_error($con));
   
-echo '<table border=1 align="center" width="50%"  >';
+echo '<table border=1 align="center" width="75%"  >';
   
 if($val=mysqli_fetch_array($ris))
 {
@@ -87,7 +87,7 @@ $c=mysqli_num_rows($ris);
 
     
     
-print "<table border=1 align=center width='50%'>";
+print "<table border=1 align=center width='75%'>";
 print "<tr class=prima><td colspan=4 align=center>Note e provvedimenti disciplinari individuali</td></tr>";
 if ($c==0) 
 {
@@ -134,7 +134,7 @@ $ris=mysqli_query($con,inspref($query)) or die ("Errore nella query di selezione
 $c=mysqli_num_rows($ris);
 
     
-print "<table border=1 align=center width='50%'>";
+print "<table border=1 align=center width='75%'>";
 print "<tr class=prima><td colspan=4 align=center>Note di classe</td></tr>";
 if ($c==0) 
 {

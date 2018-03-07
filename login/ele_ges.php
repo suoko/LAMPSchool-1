@@ -1823,7 +1823,7 @@ function menu_close($enable = TRUE)
 
                         <!--</div>
                     </nav>-->
-         <div ><iframe  name='showpage'></iframe></div>
+         <div ><iframe  name='showpage' style='min-width: 100%;' ></iframe></div>
                      </div>\n";
 }
 

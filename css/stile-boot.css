@@ -59,6 +59,7 @@ a, a:hover, a:focus {
     background: #20ff99;
     color: #fff;
     transition: all 0.3s;
+    border-radius: 20px;
 }
 
 #sidebar.active {
@@ -91,6 +92,8 @@ a, a:hover, a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
 }
 #sidebar ul li a:hover {
     color: #20ff99;
@@ -198,3 +201,4 @@ a {
     color: black !important;
     text-decoration: none;
 }
+
