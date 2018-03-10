@@ -74,7 +74,7 @@ class sql extends dbconn {
 		$db = $this->dblocal;
 		try
 		{
-			$stmt = $db->prepare("select * from tbl_utenti where userid = :user and password = :pass");
+			$stmt = $db->prepare("select * from tbl_utenti where userid = :user and password = MD5(:pass)='MD5 HASH HERE' LIMIT 1;");
 			$stmt->bindParam("user", $user);
 			$stmt->bindParam("pass", $pass);
 			$stmt->execute();

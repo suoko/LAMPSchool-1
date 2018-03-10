@@ -1,6 +1,6 @@
 <?php
 SESSION_START();
-if(isset($_SESSION['username']))
+if(isset($_SESSION['idutente']))
 {
 	header('Location: index.php');
 }
@@ -20,7 +20,7 @@ $user = $sql->listUser();
 		<table>
 			<tr>
 				<td>Username</td>
-				<td><input type="text" name="username"></td>
+				<td><input type="text" name="idutente"></td>
 			</tr>
 			<tr>
 				<td>Password</td>
@@ -35,14 +35,16 @@ $user = $sql->listUser();
 		</table>
 	</form>
 	<?php 
+		echo 'username ' . $_POST['idutente'];
+
 	if(isset($_POST['submit'])){
-		if(isset($_POST['username']) and isset($_POST['pass']))
+		if(isset($_POST['idutente']) and isset($_POST['pass']))
 		{
 			/*check login*/
-			$check = $sql->getLogin($_POST['username'],$_POST['pass']);
+			$check = $sql->getLogin($_POST['idutente'],$_POST['pass']);
 			if($check[2] == 1)
 			{
-				$_SESSION['username'] = $_POST['username'];
+				$_SESSION['idutente'] = $_POST['idutente'];
 				header('Location: index.php');
 			}else
 			{
@@ -53,7 +55,7 @@ $user = $sql->listUser();
 	?>
 	<h2>How To Make Web Push Notifications in PHP, JQuery , AJAX And Mysql</h2>
 	<h3>http://seegatesite.com</h3>
-	<h4>admin user : adminlamp , password : </h4>
+	<h4>admin user : admin , password : 123</h4>
 	<h5>user : ronaldo , password : 123</h5>
 	<h5>user : donald , password : 123</h5>
 
