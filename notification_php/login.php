@@ -53,7 +53,7 @@ $user = $sql->listUser();
 	?>
 	<h2>How To Make Web Push Notifications in PHP, JQuery , AJAX And Mysql</h2>
 	<h3>http://seegatesite.com</h3>
-	<h4>admin user : admin , password : 123</h4>
+	<h4>admin user : adminlamp , password : </h4>
 	<h5>user : ronaldo , password : 123</h5>
 	<h5>user : donald , password : 123</h5>
 

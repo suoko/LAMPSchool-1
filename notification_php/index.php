@@ -14,7 +14,7 @@ $user = $sql->listUser();
 <body>
 	<h2>Dashboard </h2>
 	<?php 
-		if($_SESSION['username'] == 'admin')
+		if($_SESSION['username'] == 'adminlamp')
 		{
 			?>
 				<a href="broadcast.php">Notification Menu</a> | 
