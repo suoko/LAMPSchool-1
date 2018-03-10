@@ -1,6 +1,6 @@
 <?php 
 SESSION_START();
 
-unset($_SESSION['idutente']);
+unset($_SESSION['userid']);
 header('Location: login.php');
 ?>

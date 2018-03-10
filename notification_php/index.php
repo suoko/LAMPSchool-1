@@ -1,4 +1,5 @@
 <?php
+header('P3P: CP="CAO PSA OUR"');
 SESSION_START();
 include "isLogin.php";
 include "dbconn.php";
@@ -14,7 +15,7 @@ $user = $sql->listUser();
 <body>
 	<h2>Dashboard </h2>
 	<?php 
-		if($_SESSION['idutente'] == 'adminlamp')
+		if($_SESSION['userid'] == 'adminlamp')
 		{
 			?>
 				<a href="broadcast.php">Notification Menu</a> | 
@@ -24,7 +25,7 @@ $user = $sql->listUser();
 	 ?>
 	 <a href="logout.php">Logout</a>
 	<hr>
-	<h4>Welcome back <strong><?php echo $_SESSION['idutente'] ?></strong></h4>
+	<h4>Welcome back <strong><?php echo $_SESSION['userid'] ?></strong></h4>
 	<p>This is example web push notification from <a href="http://seegatesite.com">seegatesite.com</a>, wait your notify please :)</p>
 	<!-- Jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

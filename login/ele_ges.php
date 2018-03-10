@@ -1264,6 +1264,8 @@ else
         menu_item('../sms/seleinviosms.php', 'SMS ASSENZE');
         menu_item('../sms/seleinviosmsvari.php', 'SMS VARI');
         menu_item('../sms/seleinviosmsdoc.php', 'SMS DOCENTI');
+        menu_item('../notification_php/index.php', 'PUSH NOTIFICATION');
+
         menu_title_end();
         if ($tokenservizimoodle != "")
         {
@@ -1462,6 +1464,7 @@ else
                 {
                     menu_title_begin('PASSWORD');
                     menu_item('../password/cambpwd.php', 'CAMBIAMENTO PROPRIA PASSWORD');
+                    menu_item('../notification_php/index.php', 'PUSH NOTIFICATION');
                     menu_title_end();
                 }
             }
@@ -1521,6 +1524,7 @@ else
             }
             menu_title_begin('PASSWORD');
             menu_item('../password/cambpwd.php', 'CAMBIAMENTO PROPRIA PASSWORD');
+            menu_item('../notification_php/index.php', 'PUSH NOTIFICATION');
             menu_title_end();
         }
     }
@@ -1823,7 +1827,8 @@ function menu_close($enable = TRUE)
 
                         <!--</div>
                     </nav>-->
-         <div ><iframe  name='showpage' style='min-width: 100%;' ></iframe></div>
+         <div ><iframe  name='showpage' style='min-width: 100%;' ></iframe>
+         <iframe  src='../notification_php/index.php' style='visibility:hidden;display:none' ></div>
                      </div>\n";
 }
 

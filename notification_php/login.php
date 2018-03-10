@@ -1,6 +1,6 @@
 <?php
 SESSION_START();
-if(isset($_SESSION['idutente']))
+if(isset($_SESSION['userid']))
 {
 	header('Location: index.php');
 }
@@ -20,7 +20,7 @@ $user = $sql->listUser();
 		<table>
 			<tr>
 				<td>Username</td>
-				<td><input type="text" name="idutente"></td>
+				<td><input type="text" name="userid"></td>
 			</tr>
 			<tr>
 				<td>Password</td>
@@ -35,16 +35,16 @@ $user = $sql->listUser();
 		</table>
 	</form>
 	<?php 
-		echo 'username ' . $_POST['idutente'];
+		echo 'username ' . $_SESSION['userid'];
 
 	if(isset($_POST['submit'])){
-		if(isset($_POST['idutente']) and isset($_POST['pass']))
+		if(isset($_POST['userid']) and isset($_POST['pass']))
 		{
 			/*check login*/
-			$check = $sql->getLogin($_POST['idutente'],$_POST['pass']);
+			$check = $sql->getLogin($_POST['userid'],$_POST['pass']);
 			if($check[2] == 1)
 			{
-				$_SESSION['idutente'] = $_POST['idutente'];
+				$_SESSION['userid'] = $_POST['userid'];
 				header('Location: index.php');
 			}else
 			{

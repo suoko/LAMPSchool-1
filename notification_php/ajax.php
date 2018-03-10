@@ -6,7 +6,7 @@ include "sql.php";
 $sql = new sql();
 $array=array();
 $rows=array();
-$listnotif = $sql->listNotifUser($_SESSION['idutente']);
+$listnotif = $sql->listNotifUser($_SESSION['userid']);
 foreach ($listnotif[1] as $key) {
 	$data['title'] = 'Notification Title';
 	$data['msg'] = $key['notif_msg'];

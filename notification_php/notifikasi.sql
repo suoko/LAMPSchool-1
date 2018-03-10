@@ -2,8 +2,7 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.54-0ubuntu0.14.04.1 : Database - notifikasi
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -32,10 +31,21 @@ CREATE TABLE `notif` (
 insert  into `notif`(`id`,`notif_msg`,`notif_time`,`notif_repeat`,`notif_loop`,`publish_date`,`username`) values (1,'hello, this is sample web push notification, you will redirect to seegatesite.com after click this notify','2017-02-08 08:48:54',1,0,'2017-02-08 08:47:54','ronaldo');
 insert  into `notif`(`id`,`notif_msg`,`notif_time`,`notif_repeat`,`notif_loop`,`publish_date`,`username`) values (2,'hello, this is sample web push notification, you will redirect to seegatesite.com after click this notify','2017-02-08 09:17:11',1,2,'2017-02-08 09:16:11','donald');
 
-insert  into `tbl_utenti`(`userid`,`password`) values ('admin','123');
-insert  into `tbl_utenti`(`userid`,`password`) values ('donald','123');
-insert  into `tbl_utenti`(`userid`,`password`) values ('ronaldo','123');
-insert  into `tbl_utenti`(`userid`,`password`) values ('messi','123');
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `user` */
+
+insert  into `user`(`username`,`password`) values ('admin','123');
+insert  into `user`(`username`,`password`) values ('donald','123');
+insert  into `user`(`username`,`password`) values ('ronaldo','123');
+insert  into `user`(`username`,`password`) values ('messi','123');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
